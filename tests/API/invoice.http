@@ -1,0 +1,9 @@
+### Получение контакта для звонка
+POST {{host}}/api/calls/requestContact
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "project_id": 0
+}

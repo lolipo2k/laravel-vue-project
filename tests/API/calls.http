@@ -1,0 +1,80 @@
+### Данные контакта по его ID
+# contact_id id контакта
+POST {{host}}/api/calls/getContact
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "contact_id": 0
+}
+
+### Список результатов звонков по проекту
+# project_id по проекту
+# from (опц) с даты
+# to (опц) по дату
+# employee_id (опц) только по данному сотруднику
+# statuses в статусах
+POST {{host}}/api/calls/getCallResults
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "project_id": 0
+}
+
+### Отказ без перезвона по результатам звонка
+POST {{host}}/api/calls/callResultReject
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "contact_id": 0,
+    "comment": "вцо иызщ дпрпзолуитпз р иывдршло"
+}
+
+### Лид по результатам звонка
+POST {{host}}/api/calls/callResultLead
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "contact_id": 0,
+    "comment": "вцо иызщ дпрпзолуитпз р иывдршло"
+}
+
+### Назначить перезвон по резульататам звонка
+POST {{host}}/api/calls/callResultRecall
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "contact_id": 0,
+    "comment": "вцо иызщ дпрпзолуитпз р иывдршло",
+    "next_date": "2018-13-23 23:45"
+}
+
+### Звонок выбранному контакту
+POST {{host}}/api/calls/callContact
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "contact_id": 0,
+    "phone_number": "2342623463245"
+}
+
+### Получение контакта для звонка
+POST {{host}}/api/calls/requestContact
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "project_id": 0
+}

@@ -1,0 +1,15 @@
+### Полный список выводов
+GET {{host}}/api/profile/withdraws
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+### Вывод средств
+POST {{host}}/api/profile/withdraw
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "amount": 100
+}

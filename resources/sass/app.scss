@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// common styles
+@import 'common';
+
+//components
+@import "components/project-list-card";
+@import "components/project-detail-page";
+
+//landing
+@import "landing";
+@import "landing-recrut";

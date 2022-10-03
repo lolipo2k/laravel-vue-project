@@ -1,0 +1,100 @@
+### Получение информации о проекте
+GET {{host}}/api/projects/1
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+### Получение URL на оплату
+POST {{host}}/api/projects/invoice/url
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "invoice_id": 2
+}
+
+### Получение списка счетов
+# Параемтры:
+# from - дата от (по умолчанию -1 год)
+# to - дата до (по умолчанию +1 день)
+POST {{host}}/api/projects/invoices
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+}
+
+### Создание счета
+# Параемтры:
+# title - название счета (по умолчанию "Оплата проекта №:project_id)
+# project_id - id проекта к которому прикреплен счет
+# type - тип счета (0 - не определен, 1 - онлайн оплата, 2 - оплата по счету (юр.лицо))
+# for_rate - за тариф
+# for_leads - за количество лидов (указать)
+# for_contacts  - за контакты
+# amount - сумма
+POST {{host}}/api/projects/create_invoice
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "title": "Тест проект",
+    "project_id": 2,
+    "type": 1,
+    "amount": 5000
+}
+
+### Создание проекта
+POST {{host}}/api/projects/create
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+    "name": "Тест проект",
+    "description": " [ij asd ;klasf'd ;aslfd ",
+    "regions": [
+        {
+            "id": 4,
+            "name": "Республика Алтай (Горный Алтай)"
+        },
+        {
+            "id": 2,
+            "name": "Республика Башкортостан"
+        },
+        {
+            "id": 5,
+            "name": "Республика Дагестан"
+        },
+        {
+            "id": 7,
+            "name": "Кабардино-Балкарская Республика"
+        }
+    ],
+    "regionsMain": [
+        7,
+        4
+    ],
+    "lead_criteries": [
+        1,
+        2,
+        3
+    ],
+    "field_categories": {
+        "id": 1,
+        "value": "Пластиковые окна"
+    },
+    "b2b": [
+        "b2c"
+    ],
+    "firm": "Рога и копыта",
+    "site": "https://roga-n-copyta.ru",
+    "firm_address": "To the grandpa's country",
+    "director": "Grand Pa",
+    "script": true,
+    "base": true,
+    "leads": 30
+}

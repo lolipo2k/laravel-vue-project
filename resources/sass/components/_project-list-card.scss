@@ -1,0 +1,39 @@
+.project-list{
+
+  .list-header{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    position: relative;
+    margin-right: 1rem;
+
+    &__add{
+      height: 2rem;
+      margin-left: 1rem;
+    }
+    &__sort{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .block-left{
+    display: flex;
+  }
+
+
+  .block-right{
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  .b-icon.bi {
+    margin-right: 0.2rem;
+  }
+  .date-create{
+    margin-right: 0.5rem;
+  }
+
+}

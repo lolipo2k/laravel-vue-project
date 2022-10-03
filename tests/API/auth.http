@@ -1,0 +1,21 @@
+### Change password
+POST {{host}}/api/auth/password
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequestt
+
+{
+  "new_password": "123123123"
+}
+
+### Login by email and password
+POST {{host}}/api/auth/login
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+> {% client.global.set("auth_token", response.headers.valueOf('Authorization')); %}

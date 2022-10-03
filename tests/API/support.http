@@ -1,0 +1,12 @@
+### Добавление обращения в саппорт
+POST {{host}}/api/support/add
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+X-Requested-With: XMLHttpRequest
+
+{
+  "name": "Test",
+  "email": "test@test.ru",
+  "phone": "2423423423",
+  "text": "asdsdfasd"
+}
